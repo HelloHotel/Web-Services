@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloHotel.API", "HelloHotel.API\HelloHotel.API.csproj", "{BDF63CC5-99AB-4746-9307-3973901DD8A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloHotel.API.Tests", "HelloHotel.API.Tests\HelloHotel.API.Tests.csproj", "{CE8221A7-ADDD-4017-AC84-28E8E6981DA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDF63CC5-99AB-4746-9307-3973901DD8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDF63CC5-99AB-4746-9307-3973901DD8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDF63CC5-99AB-4746-9307-3973901DD8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDF63CC5-99AB-4746-9307-3973901DD8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE8221A7-ADDD-4017-AC84-28E8E6981DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8221A7-ADDD-4017-AC84-28E8E6981DA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE8221A7-ADDD-4017-AC84-28E8E6981DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8221A7-ADDD-4017-AC84-28E8E6981DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
