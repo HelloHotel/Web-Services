@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj": {}
+    "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj": {
+    "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj",
         "projectName": "HelloHotel.API.Tests",
-        "projectPath": "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj",
-        "packagesPath": "C:\\Users\\JOSHUA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\obj\\",
+        "projectPath": "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\HelloHotel.API.Tests.csproj",
+        "packagesPath": "C:\\Users\\ALONSO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\JOSHUA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALONSO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -46,9 +44,21 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Testing": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.9.4, )"
+            },
+            "SpecFlow": {
+              "target": "Package",
+              "version": "[3.9.22, )"
+            },
+            "SpecFlow.NUnit": {
+              "target": "Package",
+              "version": "[3.9.22, )"
             },
             "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -78,11 +88,14 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

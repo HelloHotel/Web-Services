@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj": {}
+    "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj": {
+    "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj",
+        "projectUniqueName": "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj",
         "projectName": "HelloHotel.API",
-        "projectPath": "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj",
-        "packagesPath": "C:\\Users\\JOSHUA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\JOSHUA\\RiderProjects\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\obj\\",
+        "projectPath": "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\HelloHotel.API.csproj",
+        "packagesPath": "C:\\Users\\ALONSO\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ALONSO\\Documents\\GitHub\\HelloHotel\\Web-Services\\HelloHotel\\HelloHotel.API\\HelloHotel.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\JOSHUA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ALONSO\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -46,9 +44,49 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.11, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.2, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
             }
           },
           "imports": [
@@ -69,7 +107,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
