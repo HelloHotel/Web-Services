@@ -12,6 +12,7 @@ namespace HelloHotel.API.Persistence.Context
 
         public DbSet<Event> Events { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Client> Clients { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -64,6 +65,29 @@ namespace HelloHotel.API.Persistence.Context
                    Phone = 956139653,
                    Workstation = "Valet Service"
                } 
+            );
+            
+            builder.Entity<Client>().ToTable("Clients");
+            builder.Entity<Client>().HasKey(p => p.Id);
+            builder.Entity<Client>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Client>().Property(p => p.Name).IsRequired().HasMaxLength(20);
+            builder.Entity<Client>().Property(p => p.LastName).IsRequired().HasMaxLength(30);
+            builder.Entity<Client>().Property(p => p.Age).IsRequired();
+            builder.Entity<Client>().Property(p => p.Email).IsRequired();
+            builder.Entity<Client>().Property(p => p.Phone).IsRequired();
+            builder.Entity<Client>().Property(p => p.Room).IsRequired();
+
+            builder.Entity<Client>().HasData(
+                new Client { 
+                    Id = 1, 
+                    Name = "Daniela Dias", 
+                    LastName = "Mora Sanchez",
+                    Dni = 26227757,
+                    Age = 26,
+                    Email = "dani.mora@gmail.com",
+                    Phone = 956189229,
+                    Room = 204
+                } 
             );
             
             builder.UseSnakeCaseNamingConvention();

@@ -52,6 +52,9 @@ namespace HelloHotel.API
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IEventService, EventService>();
 
+            services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IClientService, ClientService>();
+
             services.AddAutoMapper(typeof(Startup));
         }
 

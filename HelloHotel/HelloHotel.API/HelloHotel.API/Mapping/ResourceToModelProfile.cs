@@ -10,6 +10,7 @@ namespace HelloHotel.API.Mapping
         {
             CreateMap<SaveEmployeeResource, Employee>();
             CreateMap<SaveEventResource, Event>();
+            CreateMap<SaveClientResource, Client>();
         }
     }
 }
