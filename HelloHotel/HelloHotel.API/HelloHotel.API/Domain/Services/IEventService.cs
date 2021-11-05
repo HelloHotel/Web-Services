@@ -8,7 +8,7 @@ namespace HelloHotel.API.Domain.Services
     public interface IEventService
     {
         Task<IEnumerable<Event>> ListAsync();
-        Task<IEnumerable<Event>> ListByIdAsync();
+        Task<IEnumerable<Event>> ListByEmployeeIdAsync(int employeeId);
         Task<EventResponse> SaveAsync(Event @event);
         Task<EventResponse> UpdateAsync(int id, Event @event);
         Task<EventResponse> DeleteAsync(int id);

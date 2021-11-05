@@ -8,7 +8,7 @@ namespace HelloHotel.API.Domain.Services.Communication
         {
         }
 
-        protected EventResponse(Event resource) : base(resource)
+        public EventResponse(Event resource) : base(resource)
         {
         }
     }
