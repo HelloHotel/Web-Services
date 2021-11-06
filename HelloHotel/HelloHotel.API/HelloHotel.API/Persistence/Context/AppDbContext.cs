@@ -13,6 +13,8 @@ namespace HelloHotel.API.Persistence.Context
         public DbSet<Event> Events { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Client> Clients { get; set; }
+        
+        public DbSet<Inventory> Inventories { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -87,6 +89,24 @@ namespace HelloHotel.API.Persistence.Context
                     Email = "dani.mora@gmail.com",
                     Phone = 956189229,
                     Room = 204
+                } 
+            );
+            
+            builder.Entity<Inventory>().ToTable("Inventories");
+            builder.Entity<Inventory>().HasKey(p => p.Id);
+            builder.Entity<Inventory>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Inventory>().Property(p => p.Name).IsRequired().HasMaxLength(20);
+            builder.Entity<Inventory>().Property(p => p.Stock).IsRequired().HasMaxLength(30);
+            builder.Entity<Inventory>().Property(p => p.MontUnit).IsRequired();
+            builder.Entity<Inventory>().Property(p => p.Supplier).IsRequired();
+            
+            builder.Entity<Inventory>().HasData(
+                new Inventory { 
+                    Id = 1, 
+                    Name = "Pringles", 
+                    Stock = 54,
+                    MontUnit = 10,
+                    Supplier = "Pringles",
                 } 
             );
             

@@ -10,7 +10,7 @@ using Swashbuckle.AspNetCore.Annotations;
 
 namespace HelloHotel.API.Controllers
 {
-   
+    [Produces("application/json")]
     [ApiController]
     [Route("/api/v1/[controller]")]
     
@@ -35,6 +35,7 @@ namespace HelloHotel.API.Controllers
         }
 
         [HttpPost]
+        [SwaggerOperation(Summary = "Post a Client")]
         public async Task<IActionResult> PostAsync([FromBody] SaveClientResource resource)
         {
             if (!ModelState.IsValid)
@@ -51,6 +52,7 @@ namespace HelloHotel.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Update a Client")]
         public async Task<IActionResult> PutAsync(int id, SaveClientResource resource)
         {
             if (!ModelState.IsValid)
@@ -67,6 +69,7 @@ namespace HelloHotel.API.Controllers
         }
         
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete a Client")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _clientService.DeleteAsync(id);
@@ -74,9 +77,9 @@ namespace HelloHotel.API.Controllers
             if (!result.Success)
                 return BadRequest(result.Message);
             
-            var eventResource = _mapper.Map<Client, EventResources>(result.Resource);
+            var clientResource = _mapper.Map<Client, ClientResources>(result.Resource);
 
-            return Ok(eventResource);
+            return Ok(clientResource);
         }
     }
 }
