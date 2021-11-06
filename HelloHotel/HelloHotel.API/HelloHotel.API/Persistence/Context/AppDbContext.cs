@@ -13,8 +13,8 @@ namespace HelloHotel.API.Persistence.Context
         public DbSet<Event> Events { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Client> Clients { get; set; }
-        
         public DbSet<Inventory> Inventories { get; set; }
+        public DbSet<Room> Rooms { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -107,6 +107,30 @@ namespace HelloHotel.API.Persistence.Context
                     Stock = 54,
                     MontUnit = 10,
                     Supplier = "Pringles",
+                } 
+            );
+            
+            builder.Entity<Room>().ToTable("Rooms");
+            builder.Entity<Room>().HasKey(p => p.Id);
+            builder.Entity<Room>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Room>().Property(p => p.RoomNumber).IsRequired();
+            builder.Entity<Room>().Property(p => p.Available).IsRequired().HasMaxLength(20);
+            builder.Entity<Room>().Property(p => p.Client).IsRequired().HasMaxLength(30);
+            builder.Entity<Room>().Property(p => p.Phone).IsRequired();
+            builder.Entity<Room>().Property(p => p.DataIn).IsRequired();
+            builder.Entity<Room>().Property(p => p.DateOut).IsRequired();
+            builder.Entity<Room>().Property(p => p.Mont).IsRequired();
+            
+            builder.Entity<Room>().HasData(
+                new Room { 
+                    Id = 1,
+                    RoomNumber = 101,
+                    Available = "false", 
+                    Client = "Jacinto Taboada",
+                    Phone = 919133825,
+                    DataIn = "24/09/2021",
+                    DateOut = "25/09/2021",
+                    Mont = 840
                 } 
             );
             

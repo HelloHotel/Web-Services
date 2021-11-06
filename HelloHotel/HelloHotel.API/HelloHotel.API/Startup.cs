@@ -57,6 +57,9 @@ namespace HelloHotel.API
 
             services.AddScoped<IInventoryRepository, InventoryRepository>();
             services.AddScoped<IInventoryService, InventoryService>();
+            
+            services.AddScoped<IRoomRepository, RoomRepository>();
+            services.AddScoped<IRoomService, RoomService>();
 
             services.AddAutoMapper(typeof(Startup));
         }

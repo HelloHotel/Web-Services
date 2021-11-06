@@ -12,6 +12,7 @@ namespace HelloHotel.API.Mapping
             CreateMap<Event, EventResources>();
             CreateMap<Client, ClientResources>();
             CreateMap<Inventory, InventoryResources>();
+            CreateMap<Room, RoomResources>();
         }
     }
 }
