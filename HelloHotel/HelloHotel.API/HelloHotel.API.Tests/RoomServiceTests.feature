@@ -1,4 +1,4 @@
-﻿Feature: EmployeeServiceTests
+﻿Feature: RoomServiceTests
     As a developer
     I want to update the cost of a room
     So the clients can be informate of the update
