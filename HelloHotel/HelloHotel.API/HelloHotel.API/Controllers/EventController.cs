@@ -6,6 +6,7 @@ using HelloHotel.API.Domain.Services;
 using HelloHotel.API.Extensions;
 using HelloHotel.API.Resources;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace HelloHotel.API.Controllers
 {
@@ -23,6 +24,7 @@ namespace HelloHotel.API.Controllers
         }
 
         [HttpGet]
+        [SwaggerOperation(Summary = "Get Event")]
         public async Task<IEnumerable<EventResources>> GetAllAsync()
         {
             var events = await _eventService.ListAsync();
@@ -32,6 +34,7 @@ namespace HelloHotel.API.Controllers
         }
 
         [HttpPost]
+        [SwaggerOperation(Summary = "Post Event")]
         public async Task<IActionResult> PostAsync([FromBody]SaveEventResource resource)
         {
             if (!ModelState.IsValid)
@@ -49,6 +52,7 @@ namespace HelloHotel.API.Controllers
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Put Event")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SaveEventResource resource)
         {
             if (!ModelState.IsValid)
@@ -66,6 +70,7 @@ namespace HelloHotel.API.Controllers
         }
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete Event")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var result = await _eventService.DeleteAsync(id);
