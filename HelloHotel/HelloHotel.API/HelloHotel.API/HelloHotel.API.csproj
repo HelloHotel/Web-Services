@@ -24,4 +24,21 @@
         <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.2.3" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Rating System\Controllers" />
+      <Folder Include="Rating System\Domain\Models" />
+      <Folder Include="Rating System\Domain\Repositories" />
+      <Folder Include="Rating System\Domain\Services" />
+      <Folder Include="Rating System\Persistence\Repositories" />
+      <Folder Include="Rating System\Resources" />
+      <Folder Include="Rating System\Services" />
+      <Folder Include="Searching System\Controllers" />
+      <Folder Include="Searching System\Domain\Models" />
+      <Folder Include="Searching System\Domain\Repositories" />
+      <Folder Include="Searching System\Domain\Services" />
+      <Folder Include="Searching System\Persistence\Repositories" />
+      <Folder Include="Searching System\Resources" />
+      <Folder Include="Searching System\Services" />
+    </ItemGroup>
+
 </Project>

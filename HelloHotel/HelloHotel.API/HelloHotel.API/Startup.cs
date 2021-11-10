@@ -2,11 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HelloHotel.API.Domain.Repositories;
-using HelloHotel.API.Domain.Services;
+using HelloHotel.API.Booking_System.Domain.Repositories;
+using HelloHotel.API.Booking_System.Domain.Services;
+using HelloHotel.API.Booking_System.Persistence.Repositories;
+using HelloHotel.API.Booking_System.Services;
+using HelloHotel.API.Hotel_System.Domain.Repositories;
+using HelloHotel.API.Hotel_System.Domain.Services;
+using HelloHotel.API.Hotel_System.Persistence.Repositories;
+using HelloHotel.API.Hotel_System.Services;
 using HelloHotel.API.Persistence.Context;
-using HelloHotel.API.Persistence.Repositories;
-using HelloHotel.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -60,6 +64,9 @@ namespace HelloHotel.API
             
             services.AddScoped<IRoomRepository, RoomRepository>();
             services.AddScoped<IRoomService, RoomService>();
+
+            services.AddScoped<IHotelRepository, HotelRepository>();
+            services.AddScoped<IHotelService, HotelService>();
 
             services.AddAutoMapper(typeof(Startup));
         }
