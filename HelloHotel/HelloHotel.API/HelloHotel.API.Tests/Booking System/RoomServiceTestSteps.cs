@@ -1,6 +1,6 @@
 ﻿using TechTalk.SpecFlow;
 
-namespace HelloHotel.API.Tests
+namespace HelloHotel.API.Tests.Booking_System
 {
     [Binding]
     public class RoomServiceTestSteps
