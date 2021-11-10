@@ -1,4 +1,5 @@
-﻿using HelloHotel.API.Domain.Models;
+﻿using HelloHotel.API.Booking_System.Domain.Models;
+using HelloHotel.API.Domain.Models;
 using HelloHotel.API.Extensions;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,6 +16,7 @@ namespace HelloHotel.API.Persistence.Context
         public DbSet<Client> Clients { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Room> Rooms { get; set; }
+        public DbSet<Hotel> Hotels { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -131,6 +133,26 @@ namespace HelloHotel.API.Persistence.Context
                     DataIn = "24/09/2021",
                     DateOut = "25/09/2021",
                     Mont = 840
+                } 
+            );
+            
+            builder.Entity<Hotel>().ToTable("Hotels");
+            builder.Entity<Hotel>().HasKey(p => p.Id);
+            builder.Entity<Hotel>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Hotel>().Property(p => p.Name).IsRequired();
+            builder.Entity<Hotel>().Property(p => p.Stars).IsRequired();
+            builder.Entity<Hotel>().Property(p => p.Description).IsRequired().HasMaxLength(150);
+            builder.Entity<Hotel>().Property(p => p.City).IsRequired();
+            builder.Entity<Hotel>().Property(p => p.Photo).IsRequired();
+            
+            builder.Entity<Hotel>().HasData(
+                new Hotel { 
+                    Id = 1,
+                    Name = "Holiday Inn Lima Miraflores",
+                    Stars = 5, 
+                    Description = "Hotel reconocido internacionalmente, cuenta con habitaciones totalmente equipadas, sala de conferencias, piscinas exteriores e interiores, servicios de limpieza y lavanderia",
+                    City = "Lima",
+                    Photo = "https://imgcy.trivago.com/c_lfill,d_dummy.jpeg,e_sharpen:60,f_auto,h_450,q_auto,w_450/itemimages/15/73/15733330.jpeg",
                 } 
             );
             

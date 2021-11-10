@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using HelloHotel.API.Booking_System.Domain.Repositories;
+using HelloHotel.API.Booking_System.Domain.Services;
+using HelloHotel.API.Booking_System.Persistence.Repositories;
+using HelloHotel.API.Booking_System.Services;
 using HelloHotel.API.Domain.Repositories;
 using HelloHotel.API.Domain.Services;
 using HelloHotel.API.Persistence.Context;
@@ -60,6 +64,9 @@ namespace HelloHotel.API
             
             services.AddScoped<IRoomRepository, RoomRepository>();
             services.AddScoped<IRoomService, RoomService>();
+
+            services.AddScoped<IHotelRepository, HotelRepository>();
+            services.AddScoped<IHotelService, HotelService>();
 
             services.AddAutoMapper(typeof(Startup));
         }
