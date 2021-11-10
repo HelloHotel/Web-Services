@@ -1,6 +1,6 @@
 ﻿using HelloHotel.API.Booking_System.Domain.Models;
-using HelloHotel.API.Domain.Models;
 using HelloHotel.API.Extensions;
+using HelloHotel.API.Hotel_System.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Persistence.Context

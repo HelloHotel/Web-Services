@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
 using HelloHotel.API.Booking_System.Domain.Models;
 using HelloHotel.API.Booking_System.Resources;
-using HelloHotel.API.Domain.Models;
-using HelloHotel.API.Resources;
+using HelloHotel.API.Hotel_System.Domain.Models;
+using HelloHotel.API.Hotel_System.Resources;
 
 namespace HelloHotel.API.Mapping
 {
