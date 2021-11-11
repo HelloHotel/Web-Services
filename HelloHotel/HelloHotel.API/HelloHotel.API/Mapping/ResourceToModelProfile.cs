@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
-using HelloHotel.API.Domain.Models;
-using HelloHotel.API.Resources;
+using HelloHotel.API.Booking_System.Domain.Models;
+using HelloHotel.API.Booking_System.Resources;
+using HelloHotel.API.Hotel_System.Domain.Models;
+using HelloHotel.API.Hotel_System.Resources;
 
 namespace HelloHotel.API.Mapping
 {
@@ -10,6 +12,10 @@ namespace HelloHotel.API.Mapping
         {
             CreateMap<SaveEmployeeResource, Employee>();
             CreateMap<SaveEventResource, Event>();
+            CreateMap<SaveClientResource, Client>();
+            CreateMap<SaveInventoryResource, Inventory>();
+            CreateMap<SaveRoomResource, Room>();
+            CreateMap<SaveHotelResource, Hotel>();
         }
     }
 }
