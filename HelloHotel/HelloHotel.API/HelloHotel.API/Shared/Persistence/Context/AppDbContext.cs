@@ -1,7 +1,10 @@
 ﻿using HelloHotel.API.Booking_System.Domain.Models;
+using HelloHotel.API.Hotel_System.Domain.Models;
+using HelloHotel.API.Searching_System.Domain.Models;
 using HelloHotel.API.Shared.Extensions;
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Rating_System.Domain.Models;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Shared.Persistence.Context
@@ -18,7 +21,11 @@ namespace HelloHotel.API.Shared.Persistence.Context
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
+
+        public DbSet<Stair> Stairs { get; set; }
+
         public DbSet<Feedback> Feedbacks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -158,6 +165,22 @@ namespace HelloHotel.API.Shared.Persistence.Context
                 } 
             );
             
+
+            builder.Entity<Stair>().ToTable("Stairs");
+            builder.Entity<Stair>().HasKey(p => p.Id);
+            builder.Entity<Stair>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Stair>().Property(p => p.Cost).IsRequired();
+            builder.Entity<Stair>().Property(p => p.StairNumber).IsRequired();
+            builder.Entity<Stair>().Property(p => p.RoomId).IsRequired();
+            builder.Entity<Stair>().HasData(
+                new Stair { 
+                    Id = 1,
+                    Cost = 1200,
+                    StairNumber = 1, 
+                    RoomId = 1
+                } 
+            );
+
             builder.Entity<Feedback>().ToTable("Hotels");
             builder.Entity<Feedback>().HasKey(p => p.Id);
             builder.Entity<Feedback>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
@@ -178,6 +201,7 @@ namespace HelloHotel.API.Shared.Persistence.Context
                 } 
             );
             
+
             builder.UseSnakeCaseNamingConvention();
         }
         

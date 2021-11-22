@@ -8,7 +8,7 @@
 		
 	@add_employee
 	Scenario: add information of a employee
-		When The deveveper select post
+		When The developer select post
 		And Insert the information of the employee
 		| Id | Name          | LastName       | Dni      | Age | Email             | Phone     | Workstation | Events    |
 		| 1  | Fabiana Diana | Flor Carbonell | 35213311 | 30  | flor_31@gmail.com | 922455688 | waiter      | serve bar |
@@ -16,7 +16,7 @@
   		
 	@error_message
 	Scenario: show a error message
-		When The deveveper select post
+		When The developer select post
 		And Insert the information of the employee
 		  | Id | Name          | LastName       | Dni      | Age | Email             | Phone     | Workstation | Events    |
 		  | 1  | Fabiana Diana | Flor Carbonell | 35213311 | 30  | flor_31@gmail.com |  | waiter      | serve bar |
