@@ -3,8 +3,13 @@ using HelloHotel.API.Booking_System.Domain.Models;
 using HelloHotel.API.Booking_System.Resources;
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Hotel_System.Resources;
+
 using HelloHotel.API.Searching_System.Domain.Models;
 using HelloHotel.API.Searching_System.Resources;
+
+using HelloHotel.API.Rating_System.Domain.Models;
+using HelloHotel.API.Rating_System.Resources;
+
 
 namespace HelloHotel.API.Shared.Mapping
 {
@@ -18,7 +23,11 @@ namespace HelloHotel.API.Shared.Mapping
             CreateMap<SaveInventoryResource, Inventory>();
             CreateMap<SaveRoomResource, Room>();
             CreateMap<SaveHotelResource, Hotel>();
+
             CreateMap<SaveStairResource, Stair>();
+
+            CreateMap<SaveFeedbackResource, Feedback>();
+
         }
     }
 }

@@ -2,6 +2,9 @@
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Searching_System.Domain.Models;
 using HelloHotel.API.Shared.Extensions;
+using HelloHotel.API.Hotel_System.Domain.Models;
+using HelloHotel.API.Rating_System.Domain.Models;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Shared.Persistence.Context
@@ -18,7 +21,11 @@ namespace HelloHotel.API.Shared.Persistence.Context
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
+
         public DbSet<Stair> Stairs { get; set; }
+
+        public DbSet<Feedback> Feedbacks { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -158,6 +165,7 @@ namespace HelloHotel.API.Shared.Persistence.Context
                 } 
             );
             
+
             builder.Entity<Stair>().ToTable("Stairs");
             builder.Entity<Stair>().HasKey(p => p.Id);
             builder.Entity<Stair>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
@@ -172,6 +180,28 @@ namespace HelloHotel.API.Shared.Persistence.Context
                     RoomId = 1
                 } 
             );
+
+            builder.Entity<Feedback>().ToTable("Hotels");
+            builder.Entity<Feedback>().HasKey(p => p.Id);
+            builder.Entity<Feedback>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Feedback>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+            builder.Entity<Feedback>().Property(p => p.Text).IsRequired();
+            builder.Entity<Feedback>().Property(p => p.Stars).IsRequired();
+            builder.Entity<Feedback>().Property(p => p.Date).IsRequired();
+            builder.Entity<Feedback>().Property(p => p.Photo).IsRequired();
+            
+            builder.Entity<Feedback>().HasData(
+                new Feedback { 
+                    Id = 1,
+                    Name = "Andres Quipas",
+                    Text = "Excelente serivicio", 
+                    Stars = 5,
+                    Date = "21/12/2021",
+                    Photo = "https://randommanagement.com.au/wp-content/uploads/2018/08/Ben-Chisholm-323569.jpeg",
+                } 
+            );
+            
+
             builder.UseSnakeCaseNamingConvention();
         }
         
