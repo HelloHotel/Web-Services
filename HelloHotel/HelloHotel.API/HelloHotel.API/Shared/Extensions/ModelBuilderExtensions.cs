@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace HelloHotel.API.Extensions
+namespace HelloHotel.API.Shared.Extensions
 {
     public static class ModelBuilderExtensions
     {
