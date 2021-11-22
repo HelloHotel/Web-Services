@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using HelloHotel.API.Searching_System.Domain.Repositories;
 using HelloHotel.API.Security.Authorization.Handlers.Interfaces;
 using HelloHotel.API.Security.Domain.Entities;
 using HelloHotel.API.Security.Domain.Repositories;
 using HelloHotel.API.Security.Domain.Services;
 using HelloHotel.API.Security.Domain.Services.Communication;
-using HelloHotel.API.Shared.Domain.Repositories;
 using HelloHotel.API.Shared.Exceptions;
 using BCryptNet = BCrypt.Net.BCrypt;
 

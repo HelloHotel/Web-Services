@@ -3,11 +3,12 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using HelloHotel.API.Booking_System.Domain.Models;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using HelloHotel.API.Security.Authorization.Handlers.Interfaces;
-using Security.API.Security.Domain.Entities;
 using HelloHotel.API.Security.Authorization.Settings;
+using HelloHotel.API.Security.Domain.Entities;
 
 namespace HelloHotel.API.Security.Authorization.Handlers.Implementations
 {

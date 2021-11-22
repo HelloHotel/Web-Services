@@ -3,10 +3,10 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using HelloHotel.API.Security.Authorization.Attributes;
-using Security.API.Security.Domain.Entities;
-using Security.API.Security.Domain.Services;
-using Security.API.Security.Domain.Services.Communication;
-using Security.API.Security.Resources;
+using HelloHotel.API.Security.Domain.Entities;
+using HelloHotel.API.Security.Domain.Services;
+using HelloHotel.API.Security.Domain.Services.Communication;
+using HelloHotel.API.Security.Resources;
 
 namespace HelloHotel.API.Security.Controllers
 {

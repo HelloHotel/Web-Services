@@ -2,7 +2,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using HelloHotel.API.Security.Authorization.Handlers.Interfaces;
-using Security.API.Security.Domain.Services;
+using HelloHotel.API.Security.Domain.Services;
 
 namespace HelloHotel.API.Security.Authorization.Middleware
 {

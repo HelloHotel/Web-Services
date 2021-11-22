@@ -1,4 +1,6 @@
-using Security.API.Security.Domain.Entities;
+using HelloHotel.API.Booking_System.Domain.Models;
+using HelloHotel.API.Security.Domain.Entities;
+
 
 namespace HelloHotel.API.Security.Authorization.Handlers.Interfaces
 {

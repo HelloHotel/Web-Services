@@ -4,7 +4,7 @@ using HelloHotel.API.Searching_System.Domain.Models;
 using HelloHotel.API.Shared.Extensions;
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Rating_System.Domain.Models;
-
+using HelloHotel.API.Security.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Shared.Persistence.Context
@@ -25,6 +25,7 @@ namespace HelloHotel.API.Shared.Persistence.Context
         public DbSet<Stair> Stairs { get; set; }
 
         public DbSet<Feedback> Feedbacks { get; set; }
+        public DbSet<User> Users  { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
