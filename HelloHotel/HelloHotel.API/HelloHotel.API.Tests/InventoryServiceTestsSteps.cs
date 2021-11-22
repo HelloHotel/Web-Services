@@ -8,7 +8,7 @@ namespace HelloHotel.API.Tests
         [Given(@"The Endpoint https://localhost:(.*)/api/v(.*)/inventory is available")]
         public void GivenTheEndpointHttpsLocalhostApiVInventoryIsAvailable(int p0, int p1)
         {
-            rScenarioContext.StepIsPending();
+            ScenarioContext.StepIsPending();
         }
     }
 }

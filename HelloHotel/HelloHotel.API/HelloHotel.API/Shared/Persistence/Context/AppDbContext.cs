@@ -1,6 +1,7 @@
 ﻿using HelloHotel.API.Booking_System.Domain.Models;
 using HelloHotel.API.Extensions;
 using HelloHotel.API.Hotel_System.Domain.Models;
+using HelloHotel.API.Searching_System.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Persistence.Context
@@ -17,6 +18,7 @@ namespace HelloHotel.API.Persistence.Context
         public DbSet<Inventory> Inventories { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Hotel> Hotels { get; set; }
+        public DbSet<Stair> Stairs { get; set; }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -156,6 +158,19 @@ namespace HelloHotel.API.Persistence.Context
                 } 
             );
             
+            builder.Entity<Stair>().ToTable("Stairs");
+            builder.Entity<Stair>().HasKey(p => p.Id);
+            builder.Entity<Stair>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Stair>().Property(p => p.Cost).IsRequired();
+            builder.Entity<Stair>().Property(p => p.StairNumber).IsRequired();
+            builder.Entity<Stair>().Property(p => p.Rooms).IsRequired();
+            builder.Entity<Stair>().HasData(
+                new Stair { 
+                    Id = 1,
+                    Cost = 1200,
+                    StairNumber = 1, 
+                } 
+            );
             builder.UseSnakeCaseNamingConvention();
         }
         

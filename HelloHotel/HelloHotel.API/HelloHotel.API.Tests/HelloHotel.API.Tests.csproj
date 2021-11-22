@@ -27,4 +27,8 @@
       <Folder Include="Searching System" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\HelloHotel.API\HelloHotel.API.csproj" />
+    </ItemGroup>
+
 </Project>
