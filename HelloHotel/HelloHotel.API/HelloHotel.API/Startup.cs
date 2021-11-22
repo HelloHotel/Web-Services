@@ -10,7 +10,11 @@ using HelloHotel.API.Hotel_System.Domain.Repositories;
 using HelloHotel.API.Hotel_System.Domain.Services;
 using HelloHotel.API.Hotel_System.Persistence.Repositories;
 using HelloHotel.API.Hotel_System.Services;
-using HelloHotel.API.Persistence.Context;
+using HelloHotel.API.Rating_System.Domain.Repositories;
+using HelloHotel.API.Rating_System.Domain.Services;
+using HelloHotel.API.Rating_System.Persistence.Repositories;
+using HelloHotel.API.Rating_System.Services;
+using HelloHotel.API.Shared.Persistence.Context;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -67,6 +71,9 @@ namespace HelloHotel.API
 
             services.AddScoped<IHotelRepository, HotelRepository>();
             services.AddScoped<IHotelService, HotelService>();
+            
+            services.AddScoped<IFeedbackRepository, FeedbackRepository>();
+            services.AddScoped<IFeedbackService, FeedbackService>();
 
             services.AddAutoMapper(typeof(Startup));
         }

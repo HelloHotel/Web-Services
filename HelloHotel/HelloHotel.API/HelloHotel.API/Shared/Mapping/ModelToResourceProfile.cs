@@ -3,8 +3,10 @@ using HelloHotel.API.Booking_System.Domain.Models;
 using HelloHotel.API.Booking_System.Resources;
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Hotel_System.Resources;
+using HelloHotel.API.Rating_System.Domain.Models;
+using HelloHotel.API.Rating_System.Resources;
 
-namespace HelloHotel.API.Mapping
+namespace HelloHotel.API.Shared.Mapping
 {
     public class ModelToResourceProfile : Profile
     {
@@ -16,6 +18,7 @@ namespace HelloHotel.API.Mapping
             CreateMap<Inventory, InventoryResources>();
             CreateMap<Room, RoomResources>();
             CreateMap<Hotel, HotelResources>();
+            CreateMap<Feedback, FeedbackResources>();
         }
     }
 }
