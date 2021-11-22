@@ -1,4 +1,4 @@
-﻿namespace HelloHotel.API.Domain.Services.Communication
+﻿namespace HelloHotel.API.Shared.Domain.Services.Communication
 {
     public class BaseResponse<T>
     {

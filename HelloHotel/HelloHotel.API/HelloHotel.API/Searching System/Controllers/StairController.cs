@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
-using HelloHotel.API.Extensions;
 using HelloHotel.API.Hotel_System.Resources;
 using HelloHotel.API.Searching_System.Domain.Models;
 using HelloHotel.API.Searching_System.Domain.Services;
 using HelloHotel.API.Searching_System.Domain.Services.Communication;
 using HelloHotel.API.Searching_System.Resources;
+using HelloHotel.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 
@@ -27,7 +27,7 @@ namespace HelloHotel.API.Searching_System.Controllers
         }
 
         [HttpGet]
-        [SwaggerOperation(Summary = "Get All Products", Tags = new[] {"Categories"})]
+        [SwaggerOperation(Summary = "Get All Stairs")]
         public async Task<IEnumerable<StairResource>> GetAllAsync()
         {
             var stairs = await _stairService.ListAsync();
@@ -37,6 +37,7 @@ namespace HelloHotel.API.Searching_System.Controllers
 
 
         [HttpPost]
+        [SwaggerOperation(Summary = "Add new Stairs")]
         public async Task<IActionResult> PostAsync([FromBody] SaveStairResource resource)
         {
             if (!ModelState.IsValid)
@@ -54,6 +55,7 @@ namespace HelloHotel.API.Searching_System.Controllers
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Update Stair")]
         public async Task<IActionResult> PutAsync(int id, [FromBody] SaveStairResource resource)
         {
             if (!ModelState.IsValid)
@@ -67,6 +69,19 @@ namespace HelloHotel.API.Searching_System.Controllers
 
             var categoryResource = _mapper.Map<Stair, StairResource>(result.Resource);
             return Ok(categoryResource);
+        }
+        [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete a Stair")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var result = await _stairService.DeleteAsync(id);
+            
+            if (!result.Success)
+                return BadRequest(result.Message);
+            
+            var stairResource = _mapper.Map<Stair, StairResource>(result.Resource);
+
+            return Ok(stairResource);
         }
     }
 }

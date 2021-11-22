@@ -9,5 +9,8 @@ namespace HelloHotel.API.Searching_System.Resources
         
         [Required]
         public int Cost { get; set; }
+        
+        [Required]
+        public int RoomId { get; set; }
     }
 }

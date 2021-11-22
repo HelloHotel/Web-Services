@@ -3,8 +3,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Hotel_System.Domain.Repositories;
-using HelloHotel.API.Persistence.Context;
-using HelloHotel.API.Persistence.Repositories;
+using HelloHotel.API.Shared.Persistence.Context;
+using HelloHotel.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Hotel_System.Persistence.Repositories

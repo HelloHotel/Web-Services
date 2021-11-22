@@ -8,6 +8,6 @@ namespace HelloHotel.API.Searching_System.Domain.Models
         public int Id { get; set; }
         public int StairNumber { get; set; }
         public int Cost { get; set; }
-        public IList<Room> Rooms { get; set; } = new List<Room>();
+        public int RoomId { get; set; }
     }
 }

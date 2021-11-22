@@ -4,7 +4,7 @@ using AutoMapper;
 using HelloHotel.API.Booking_System.Domain.Models;
 using HelloHotel.API.Booking_System.Domain.Services;
 using HelloHotel.API.Booking_System.Resources;
-using HelloHotel.API.Extensions;
+using HelloHotel.API.Shared.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 

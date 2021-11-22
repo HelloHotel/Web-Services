@@ -1,7 +1,7 @@
 ﻿
-using HelloHotel.API.Persistence.Context;
+using HelloHotel.API.Shared.Persistence.Context;
 
-namespace HelloHotel.API.Persistence.Repositories
+namespace HelloHotel.API.Shared.Persistence.Repositories
 {
     public abstract class BaseRepository
     {

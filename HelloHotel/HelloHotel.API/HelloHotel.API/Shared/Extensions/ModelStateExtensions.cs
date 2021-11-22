@@ -1,9 +1,8 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace HelloHotel.API.Extensions
+namespace HelloHotel.API.Shared.Extensions
 {
     public static class ModelStateExtensions
     {

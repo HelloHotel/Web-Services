@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using HelloHotel.API.Persistence.Context;
-using HelloHotel.API.Persistence.Repositories;
 using HelloHotel.API.Searching_System.Domain.Models;
 using HelloHotel.API.Searching_System.Domain.Repositories;
+using HelloHotel.API.Shared.Persistence.Context;
+using HelloHotel.API.Shared.Persistence.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 namespace HelloHotel.API.Searching_System.Persistence.Repositories

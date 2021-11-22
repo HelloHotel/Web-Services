@@ -5,5 +5,6 @@
         public int Id { get; set; }
         public int StairNumber { get; set; }
         public int Cost { get; set; }
+        public int RoomId { get; set; }
     }
 }

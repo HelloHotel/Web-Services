@@ -1,5 +1,5 @@
-﻿using HelloHotel.API.Domain.Services.Communication;
-using HelloHotel.API.Searching_System.Domain.Models;
+﻿using HelloHotel.API.Searching_System.Domain.Models;
+using HelloHotel.API.Shared.Domain.Services.Communication;
 
 namespace HelloHotel.API.Searching_System.Domain.Services.Communication
 {

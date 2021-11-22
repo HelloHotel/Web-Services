@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
-using HelloHotel.API.Persistence.Context;
 using HelloHotel.API.Searching_System.Domain.Repositories;
+using HelloHotel.API.Shared.Persistence.Context;
 
 namespace HelloHotel.API.Searching_System.Persistence.Repositories
 {

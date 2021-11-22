@@ -1,10 +1,10 @@
 ﻿using HelloHotel.API.Booking_System.Domain.Models;
-using HelloHotel.API.Extensions;
 using HelloHotel.API.Hotel_System.Domain.Models;
 using HelloHotel.API.Searching_System.Domain.Models;
+using HelloHotel.API.Shared.Extensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace HelloHotel.API.Persistence.Context
+namespace HelloHotel.API.Shared.Persistence.Context
 {
     public class AppDbContext : DbContext
     {
@@ -163,12 +163,13 @@ namespace HelloHotel.API.Persistence.Context
             builder.Entity<Stair>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Stair>().Property(p => p.Cost).IsRequired();
             builder.Entity<Stair>().Property(p => p.StairNumber).IsRequired();
-            builder.Entity<Stair>().Property(p => p.Rooms).IsRequired();
+            builder.Entity<Stair>().Property(p => p.RoomId).IsRequired();
             builder.Entity<Stair>().HasData(
                 new Stair { 
                     Id = 1,
                     Cost = 1200,
                     StairNumber = 1, 
+                    RoomId = 1
                 } 
             );
             builder.UseSnakeCaseNamingConvention();
