@@ -33,6 +33,7 @@ namespace HelloHotel.API.Hotel_System.Controllers
         }
 
         [HttpPost]
+        [SwaggerOperation(Summary = "Post Employee")]
         public async Task<IActionResult> PostAsync([FromBody] SaveEmployeeResource resource)
         {
             if (!ModelState.IsValid)
@@ -49,6 +50,7 @@ namespace HelloHotel.API.Hotel_System.Controllers
         }
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Put Employee")]
         public async Task<IActionResult> PutAsync(int id, SaveEmployeeResource resource)
         {
             if (!ModelState.IsValid)
